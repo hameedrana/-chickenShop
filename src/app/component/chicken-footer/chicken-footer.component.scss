@@ -1,0 +1,24 @@
+
+.main-footer {
+  &__container {
+    display: flex;
+    justify-content: space-around;
+    padding: 44px 0px;
+    font-size: 24px;
+    font-weight: 700;
+    font-family: Roboto;
+    line-height: 28.13px;
+    background-color: #e81f27;
+    color: #ffffff;
+  }
+  &__address-area{
+    margin-bottom: 2rem;
+  }
+  
+  &__socialLinks {
+    padding-top: 5.4rem;
+    img{
+        margin-right: 1rem;
+    }
+  }
+}

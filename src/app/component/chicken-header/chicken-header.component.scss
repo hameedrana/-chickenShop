@@ -1,0 +1,145 @@
+// .red {
+//   border: 1px solid red;
+// }
+.main-header {
+  &__container {
+    height: 200px;
+    background-color: white;
+    width: 100%;
+  }
+  &__logo {
+    width: 106px;
+    height: 106px;
+    padding-top: 62px;
+    padding-left: 120px;
+    
+  }
+  &__nav-bar-section{
+    display: flex;
+    justify-content: center;
+    padding-top: 6rem;
+  }
+  &__nav-bar-menu {
+    display: flex;
+    justify-content: space-evenly;
+    // margin-top: 5.7rem;
+    padding-bottom: 17px;
+    ul {
+      display: flex;
+      text-decoration: none;
+      list-style-type: none;
+      // padding: 0px 0px 0px 41px;
+    }
+    ul li {
+        font-family: Roboto;
+      margin-right: 2rem;
+      font-size: 24px;
+      font-weight: 400;
+      color: #000000;
+    //   line-height: 28.13px;
+    }
+  }
+  &__order-btn {
+    font-family: Roboto;
+    // padding: 13px 44px;
+    // margin-top: 12px;
+    border-radius: 30px;
+    background-color: #e81f27;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    font-size: 24px;
+  }
+}
+
+/* Basic styles for the dropdown container */
+.dropdown {
+  position: relative;
+  // display: flex;
+}
+
+/* Styles for the dropdown button */
+.dropdown-btn {
+    font-family: Roboto;
+  // padding: 13px 44px;
+  // margin-top: 12px;
+  margin-right: 13px;
+  border: 1px solid black;
+  border-radius: 30px;
+  background-color: #ffffff;
+  // border: none;
+  cursor: pointer;
+  // outline: none;
+  font-size: 24px;
+}
+
+/* Styles for the dropdown content */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 60px;
+  background-color: white;
+  font-family: Roboto;
+  min-width: 241px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+/* Styles for the links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  
+  text-decoration: none;
+  font-family: Roboto;
+  display: block;
+}
+
+/* Change color of links on hover */
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+/* Show the dropdown content when the button is clicked and has focus */
+.dropdown:focus-within .dropdown-content {
+  display: block;
+}
+
+/* Optional: Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:focus-within .dropdown-btn {
+  background-color: #2980b9;
+}
+
+@media screen and (max-width: '837px') {
+  .dropdown {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 0.5rem;
+  }
+  .dropdown-btn {
+  margin-right: 2px;
+}
+.nav-section{
+  padding-top: 5rem;
+}
+  .main-header {
+
+    &__nav-bar-section{
+      display: unset;
+    // justify-content: center;
+    padding-top: 1rem;
+    }
+    &__nav-bar-menu{
+      display: flex;
+    justify-content: end;
+    padding-bottom: 17px;
+    // ul{
+    //   padding: 0px 0px 0px 35px;
+    // }
+    }
+
+
+
+  }
+}

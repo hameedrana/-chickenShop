@@ -1,0 +1,133 @@
+.main-container {
+  background-color: white;
+  margin-top: 9rem;
+}
+
+.yellow-text {
+    padding-top: 18px;
+    font-family: Roboto;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 28.13px;
+  color: #FBED1D;
+}
+
+.white-text {
+    padding-top: 18px;
+    font-family: Roboto;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 28.13px;
+    color: #d9d9d9;
+}
+.header-items:nth-child(7) {
+   opacity: 0.5; ;
+  }
+
+.forward-btn{
+    position: absolute;
+    right: 5%;
+}  
+.backward-btn{
+    position: absolute;
+    left: 5%;
+}
+
+.main-home {
+  &__title-uper-bar {
+    padding: 0rem 0rem 3rem 9rem;
+    font-family: Fraunces;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 59.18px;
+    color: #000000;
+  }
+  &__uper-bar {
+    display: flex;
+    justify-content: space-evenly;
+    background: #e81f27;
+    padding: 20px 0px 27px 200px;
+    button{
+        border: none;
+    background: transparent;
+    }
+  }
+  &__uper-bar-mobile-view{
+    display: none;
+  }
+  
+
+  &__deal-card {
+    display: flex;
+    justify-content: space-around;
+    font-family: Fraunces;
+    margin-top: 8rem;
+  
+    img{
+        width: 100%;
+    }
+  }
+  &__offer-list {
+    padding-left: 2rem;
+  }
+  &__deal-card-offers {
+    font-family: Roboto;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 28-13px;
+    color: #e81f27;
+    margin-top: 2rem;
+  }
+  &__deals-card-served {
+    font-family: Roboto;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 23.44px;
+    margin-bottom: 1rem;
+  }
+  &__deal-price {
+    font-family: Roboto;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 20.13px;
+    span {
+      color: #000000;
+    }
+  }
+
+  &__chicken-shop-loc {
+    margin: 5rem 0rem 5rem 0rem;
+    img{
+        width: 100%;
+    }
+  }
+}
+
+@media screen and (max-width: '720px') {
+  .main-home {
+    &__uper-bar{
+      display: none;
+    }
+    &__uper-bar-mobile-view{
+      display: flex;
+      justify-content: space-evenly;
+      background: #e81f27;
+      padding: 20px 0px 27px 100px;
+      button{
+          border: none;
+      background: transparent;
+      }
+    }
+    &__deal-card {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      font-family: Fraunces;
+      margin-top: 2rem;
+    
+      img{
+          width: 100%;
+      }
+    }
+  }
+}

@@ -1,0 +1,264 @@
+<div class="container-fluid">
+    <div class="main-container row ">
+        <!-- <div class=""> -->
+        <div class="main-home__title-uper-bar col-12">Our Menu</div>
+        <div class="main-home__uper-bar col-12">
+            <button class="backward-btn" (click)="moveBackward()" [disabled]="currentIndex === 0">
+                <img src="assets/icon-menu-page/Group 2.svg" alt="">
+            </button>
+
+            <div class="header-items" *ngFor="let item of visibleItems; let i = index"
+                [ngClass]="{'yellow-text': i === 0, 'white-text': i !== 0}">
+                {{ item }}
+
+            </div>
+
+
+            <button class="forward-btn" (click)="moveForward()" [disabled]="currentIndex + 5 >= items.length">
+
+                <img src="assets/icon-menu-page/Group 3.svg" alt="">
+            </button>
+
+
+        </div>
+
+
+        <!-- mobile screen -->
+        <div class="main-home__uper-bar-mobile-view col-12">
+            <button class="backward-btn" (click)="backward()" [disabled]="mobileCurrentIndex === 0">
+                <img src="assets/icon-menu-page/Group 2.svg" alt="">
+            </button>
+
+            <div class="header-items" *ngFor="let item of visibleItem; let i = index"
+                [ngClass]="{'yellow-text': i === 0, 'white-text': i !== 0}">
+                {{ item }}
+
+            </div>
+
+
+            <button class="forward-btn" (click)="forward()" [disabled]="mobileCurrentIndex + 2 >= items.length">
+
+                <img src="assets/icon-menu-page/Group 3.svg" alt="">
+            </button>
+
+
+        </div>
+
+
+
+
+        <!-- <div class="container"> -->
+        <div class="main-home__deal-card ">
+            <div >
+                <div>
+                    <img src="/assets/icon-home-page/Rectangle 8.svg" alt="">
+                </div>
+                <div class="main-home__offer-list">
+                    <div class="main-home__deal-card-offers">
+                        <span>12PC Chicken Meal</span>
+                    </div>
+                    <div class="main-home__deals-card-served">
+                        <span>Served with two signature sauces</span>
+                    </div>
+                    <div class="main-home__deal-price">
+                        <span>16.99</span>
+                    </div>
+                </div>
+            </div>
+
+            <div >
+                <div>
+                    <img src="/assets/icon-home-page/Rectangle 10.svg" alt="">
+                </div>
+                <div class="main-home__offer-list">
+                    <div class="main-home__deal-card-offers">
+                        <span>Avocado Chicken Bowl</span>
+                    </div>
+                    <div class="main-home__deals-card-served">
+                        <span>Lamb Gyro, avocado and pear</span>
+                    </div>
+                    <div class="main-home__deal-price">
+                        <span>16.99</span>
+                    </div>
+                </div>
+            </div>
+
+            <div >
+                <div>
+                    <img src="/assets/icon-home-page/Rectangle 12.svg" alt="">
+                </div>
+                <div class="main-home__offer-list">
+                    <div class="main-home__deal-card-offers">
+                        <span>Chicken Stop Pita</span>
+                    </div>
+                    <div class="main-home__deals-card-served">
+                        <span>Served with sauce of choice</span>
+                    </div>
+                    <div class="main-home__deal-price">
+                        <span>12.99</span>
+                    </div>
+                </div>
+            </div>
+            <div >
+                <div>
+                    <img src="/assets/icon-home-page/Rectangle 14.svg" alt="">
+                </div>
+                <div class="main-home__offer-list">
+                    <div class="main-home__deal-card-offers">
+                        <span>Crispy Chicken Sandwich</span>
+                    </div>
+                    <div class="main-home__deals-card-served">
+                        <span>Served with two signature sauces</span>
+                    </div>
+                    <div class="main-home__deal-price">
+                        <span>10.99</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="main-home__deal-card ">
+            <div >
+                <div>
+                    <img src="/assets/icon-home-page/Rectangle 8.svg" alt="">
+                </div>
+                <div class="main-home__offer-list">
+                    <div class="main-home__deal-card-offers">
+                        <span>12PC Chicken Meal</span>
+                    </div>
+                    <div class="main-home__deals-card-served">
+                        <span>Served with two signature sauces</span>
+                    </div>
+                    <div class="main-home__deal-price">
+                        <span>16.99</span>
+                    </div>
+                </div>
+            </div>
+
+            <div >
+                <div>
+                    <img src="/assets/icon-home-page/Rectangle 10.svg" alt="">
+                </div>
+                <div class="main-home__offer-list">
+                    <div class="main-home__deal-card-offers">
+                        <span>Avocado Chicken Bowl</span>
+                    </div>
+                    <div class="main-home__deals-card-served">
+                        <span>Lamb Gyro, avocado and pear</span>
+                    </div>
+                    <div class="main-home__deal-price">
+                        <span>16.99</span>
+                    </div>
+                </div>
+            </div>
+
+            <div >
+                <div>
+                    <img src="/assets/icon-home-page/Rectangle 12.svg" alt="">
+                </div>
+                <div class="main-home__offer-list">
+                    <div class="main-home__deal-card-offers">
+                        <span>Chicken Stop Pita</span>
+                    </div>
+                    <div class="main-home__deals-card-served">
+                        <span>Served with sauce of choice</span>
+                    </div>
+                    <div class="main-home__deal-price">
+                        <span>12.99</span>
+                    </div>
+                </div>
+            </div>
+            <div >
+                <div>
+                    <img src="/assets/icon-home-page/Rectangle 14.svg" alt="">
+                </div>
+                <div class="main-home__offer-list">
+                    <div class="main-home__deal-card-offers">
+                        <span>Crispy Chicken Sandwich</span>
+                    </div>
+                    <div class="main-home__deals-card-served">
+                        <span>Served with two signature sauces</span>
+                    </div>
+                    <div class="main-home__deal-price">
+                        <span>10.99</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="main-home__deal-card ">
+            <div >
+                <div>
+                    <img src="/assets/icon-home-page/Rectangle 8.svg" alt="">
+                </div>
+                <div class="main-home__offer-list">
+                    <div class="main-home__deal-card-offers">
+                        <span>12PC Chicken Meal</span>
+                    </div>
+                    <div class="main-home__deals-card-served">
+                        <span>Served with two signature sauces</span>
+                    </div>
+                    <div class="main-home__deal-price">
+                        <span>16.99</span>
+                    </div>
+                </div>
+            </div>
+
+            <div >
+                <div>
+                    <img src="/assets/icon-home-page/Rectangle 10.svg" alt="">
+                </div>
+                <div class="main-home__offer-list">
+                    <div class="main-home__deal-card-offers">
+                        <span>Avocado Chicken Bowl</span>
+                    </div>
+                    <div class="main-home__deals-card-served">
+                        <span>Lamb Gyro, avocado and pear</span>
+                    </div>
+                    <div class="main-home__deal-price">
+                        <span>16.99</span>
+                    </div>
+                </div>
+            </div>
+
+            <div >
+                <div>
+                    <img src="/assets/icon-home-page/Rectangle 12.svg" alt="">
+                </div>
+                <div class="main-home__offer-list">
+                    <div class="main-home__deal-card-offers">
+                        <span>Chicken Stop Pita</span>
+                    </div>
+                    <div class="main-home__deals-card-served">
+                        <span>Served with sauce of choice</span>
+                    </div>
+                    <div class="main-home__deal-price">
+                        <span>12.99</span>
+                    </div>
+                </div>
+            </div>
+            <div >
+                <div>
+                    <img src="/assets/icon-home-page/Rectangle 14.svg" alt="">
+                </div>
+                <div class="main-home__offer-list">
+                    <div class="main-home__deal-card-offers">
+                        <span>Crispy Chicken Sandwich</span>
+                    </div>
+                    <div class="main-home__deals-card-served">
+                        <span>Served with two signature sauces</span>
+                    </div>
+                    <div class="main-home__deal-price">
+                        <span>10.99</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- </div> -->
+
+
+        <!-- <div class="main-home__chicken-shop-loc"> -->
+            <div class="main-home__chicken-shop-loc col-12">
+                <img src="assets/icon-home-page/Rectangle 29.svg" alt="">
+            </div>
+        <!-- </div> -->
+    </div>
+</div>
